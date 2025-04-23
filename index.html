@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+  <title>Baggage Weight Checker</title>
 </head>
 <body>
+  <h2>Baggage Allowance Checker</h2>
+  <label for="weightInput">Enter baggage weight (kg):</label>
+  <input type="number" id="weightInput" placeholder="e.g. 12.5">
+  <button onclick="checkBaggage()">Check Weight</button>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+  <script>
+    function checkBaggage() {
+      const weight = parseFloat(document.getElementById("weightInput").value);
 
+      if (isNaN(weight)) {
+        alert("Please enter a valid number.");
+        return;
+      }
+
+      if (weight > 15) {
+        alert("Baggage exceeds the 15kg allowance!");
+      } else {
+        alert("Baggage is within the allowance.");
+      }
+    }
+  </script>
 </body>
 </html>
