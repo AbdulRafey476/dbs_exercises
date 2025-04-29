@@ -57,6 +57,16 @@
 
   <button onclick="handleClick2()">Calculate Sum</button>
 
+  <h2>Exercise 6:</h2>
+
+  <label for="inputAAA">a (comma-separated factors):</label><br>
+  <textarea id="inputAAA" rows="2" cols="50"></textarea><br><br>
+
+  <label for="inputLLL">l (comma-separated values):</label><br>
+  <textarea id="inputLLL" rows="4" cols="50"></textarea><br><br>
+
+  <button onclick="handleClick()">Calculate Sum</button>
+
   <script>
     function checkBaggage() {
       const weight = parseFloat(document.getElementById("weightInput").value);
@@ -159,6 +169,37 @@
       }
 
       const result = f5(a, l);
+      alert("The sum is: " + result);
+    }
+
+   
+    // Exercise 6
+    function f6(a, l) {
+      return l.reduce((sum, num) => {
+        return a.some(factor => num % factor === 0) ? sum + num : sum;
+      }, 0);
+    }
+
+    function handleClick3() {
+      const aRaw = document.getElementById("inputAAA").value;
+      const lRaw = document.getElementById("inputLLL").value;
+
+      const a = aRaw
+        .split(',')
+        .map(n => parseInt(n.trim()))
+        .filter(n => !isNaN(n));
+
+      const l = lRaw
+        .split(',')
+        .map(n => parseInt(n.trim()))
+        .filter(n => !isNaN(n));
+
+      if (a.length === 0 || l.length === 0) {
+        alert("Please enter valid numbers in both a and l.");
+        return;
+      }
+
+      const result = f6(a, l);
       alert("The sum is: " + result);
     }
 
