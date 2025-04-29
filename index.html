@@ -133,16 +133,12 @@
    }
 
    // Exercise 5
-   function f5(a, l) {
-      let sum = 0;
-      for (let i = 0; i < l.length; i++) {
-        if (l[i] % a[0] === 0 || l[i] % a[1] === 0) {
-          sum += l[i];
-        }
-      }
-      return sum;
+    function f5(a, l) {
+      return l.reduce((sum, num) => {
+        return (num % a[0] === 0 || num % a[1] === 0) ? sum + num : sum;
+      }, 0);
     }
-
+   
     function handleClick2() {
       const aRaw = document.getElementById("inputAA").value;
       const lRaw = document.getElementById("inputLL").value;
