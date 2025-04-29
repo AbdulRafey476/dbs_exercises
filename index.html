@@ -47,6 +47,16 @@
 
   <button onclick="handleClick()">Calculate Sum</button>
 
+  <h1>Exercise 5:</h1>
+
+  <label for="inputAA">a (two numbers, comma-separated):</label><br>
+  <textarea id="inputAA" rows="2" cols="50"></textarea><br><br>
+
+  <label for="inputLL">l (list of numbers, comma-separated):</label><br>
+  <textarea id="inputLL" rows="4" cols="50"></textarea><br><br>
+
+  <button onclick="handleClick2()">Calculate Sum</button>
+
   <script>
     function checkBaggage() {
       const weight = parseFloat(document.getElementById("weightInput").value);
@@ -99,15 +109,13 @@
 
    // Exercise 4
    function f4(a, b, l) {
-     let sum = 0;
-     for (let i = 0; i < l.length; i++) {
-       if (l[i] % a === 0 || l[i] % b === 0) {
-         sum += l[i];
+     return l.reduce((sum, x) => {
+       if (x % a === 0 || x % b === 0) {
+         return sum + x;
        }
-     }
-     return sum;
+       return sum;
+     }, 0);
    }
-
    // console.log(f4(3, 5, [1, 2, 3, 4, 5, 6, 10, 15, 17]));
 
    function handleClick() {
@@ -123,6 +131,40 @@
       const result = f4(a, b, l);
       alert("The sum is: " + result);
    }
+
+   // Exercise 5
+   function f5(a, l) {
+      let sum = 0;
+      for (let i = 0; i < l.length; i++) {
+        if (l[i] % a[0] === 0 || l[i] % a[1] === 0) {
+          sum += l[i];
+        }
+      }
+      return sum;
+    }
+
+    function handleClick2() {
+      const aRaw = document.getElementById("inputAA").value;
+      const lRaw = document.getElementById("inputLL").value;
+
+      const a = aRaw
+        .split(',')
+        .map(num => parseInt(num.trim()))
+        .filter(num => !isNaN(num));
+
+      const l = lRaw
+        .split(',')
+        .map(num => parseInt(num.trim()))
+        .filter(num => !isNaN(num));
+
+      if (a.length !== 2) {
+        alert("Please enter exactly two numbers for 'a'.");
+        return;
+      }
+
+      const result = f5(a, l);
+      alert("The sum is: " + result);
+    }
 
   </script>
 </body>
