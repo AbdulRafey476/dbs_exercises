@@ -4,10 +4,31 @@
   <title>Baggage Weight Checker</title>
 </head>
 <body>
-  <h2>Baggage Allowance Checker</h2>
+  <p>Exercise 1:</p>
   <label for="weightInput">Enter baggage weight (kg):</label>
   <input type="number" id="weightInput" placeholder="e.g. 12.5">
   <button onclick="checkBaggage()">Check Weight</button>
+  
+  <p>Exercise 2:</p>
+  <p>Create a page with a button</p>
+  <p>When the user clicks, </p>
+  <p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.</p>
+  <p>Find the sum of all the multiples of 3 or 5 below 1000 and alert the user to the correct answer.</p>
+  <p>The prompt: <button onclick="doIt()">Press me!</button></p>
+
+  <p>Exercise 3, Functions:</p>
+  <p>Create a page with a button and three input boxes, labelled a, b and n</p>
+
+  <label for="a">a: </label>
+  <input type="number" id="a"><br><br>
+
+  <label for="b">b: </label>
+  <input type="number" id="b"><br><br>
+
+  <label for="n">n: </label>
+  <input type="number" id="n"><br><br>
+
+  <button onclick="calculateAndShowSum()">Calculate Sum</button>
 
   <script>
     function checkBaggage() {
@@ -24,6 +45,41 @@
         alert("Baggage is within the allowance.");
       }
     }
+
+    function doIt() {
+        let sum = 0;
+        for (let i = 1; i < 1000; i++) {
+            if (i % 3 === 0 || i % 5 === 0) {
+                sum += i;
+            }
+        }
+        alert("The sum of all multiples of 3 or 5 below 1000 is: " + sum);
+    }
+
+    function sumMultiples(a, b, n) {
+        let sum = 0;
+        for (let i = 1; i < n; i++) {
+            if (i % a === 0 || i % b === 0) {
+                sum += i;
+            }
+        }
+        return sum;
+    }
+
+    function calculateAndShowSum() {
+        const a = parseInt(document.getElementById("a").value);
+        const b = parseInt(document.getElementById("b").value);
+        const n = parseInt(document.getElementById("n").value);
+
+        if (isNaN(a) || isNaN(b) || isNaN(n)) {
+            alert("Please enter valid numbers for a, b, and n.");
+            return;
+        }
+
+        const result = sumMultiples(a, b, n);
+        alert("The sum of all multiples of " + a + " or " + b + " below " + n + " is: " + result);
+    }
+
   </script>
 </body>
 </html>
