@@ -1,3 +1,4 @@
+// EXERCISE 1
 function checkBaggage() {
     const weight = parseFloat(document.getElementById("weightInput").value);
 
@@ -13,6 +14,7 @@ function checkBaggage() {
     }
 }
 
+// EXERCISE 2
 function doIt() {
     let sum = 0;
     for (let i = 1; i < 1000; i++) {
@@ -23,6 +25,7 @@ function doIt() {
     alert("The sum of all multiples of 3 or 5 below 1000 is: " + sum);
 }
 
+// EXERCISE 3
 function sumMultiples(a, b, n) {
     let sum = 0;
     for (let i = 1; i < n; i++) {
@@ -47,7 +50,7 @@ function calculateAndShowSum() {
     alert("The sum of all multiples of " + a + " or " + b + " below " + n + " is: " + result);
 }
 
-// Exercise 4
+// EXERCISE 4
 function f4(a, b, l) {
     return l.reduce((sum, x) => {
         if (x % a === 0 || x % b === 0) {
@@ -72,7 +75,7 @@ function handleClick() {
     alert("The sum is: " + result);
 }
 
-// Exercise 5
+// EXERCISE 5
 function f5(a, l) {
     return l.reduce((sum, num) => {
         return (num % a[0] === 0 || num % a[1] === 0) ? sum + num : sum;
@@ -103,7 +106,7 @@ function handleClick2() {
 }
 
 
-// Exercise 6
+// EXERCISE 6
 function f6(a, l) {
     return l.reduce((sum, num) => {
         return a.some(factor => num % factor === 0) ? sum + num : sum;
