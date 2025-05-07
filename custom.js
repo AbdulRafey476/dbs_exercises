@@ -157,7 +157,7 @@ function handleClick4() {
 
     const basket = { apple, oranges, banana }
     const prices = { apple: appleprice, oranges: orangesprice, banana: bananaprice }
-    
+
     const result = f7(basket, prices);
-    alert("The sum is: " + result);
+    alert("Total Cost of Basket: " + result);
 }
