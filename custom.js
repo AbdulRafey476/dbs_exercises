@@ -109,6 +109,7 @@ function handleClick2() {
 // EXERCISE 6
 function f6(a, l) {
     return l.reduce((sum, num) => {
+        // console.log(num + "--" +sum)
         return a.some(factor => num % factor === 0) ? sum + num : sum;
     }, 0);
 }
@@ -133,5 +134,30 @@ function handleClick3() {
     }
 
     const result = f6(a, l);
+    alert("The sum is: " + result);
+}
+
+// EXERCISE 7
+function f7(basket, prices) {
+    let total = 0;
+    for (let item in basket) {
+        total += basket[item] * prices[item]
+    }
+    return total
+}
+
+function handleClick4() {
+    const apple = Number(document.getElementById("apple").value);
+    const oranges = Number(document.getElementById("oranges").value);
+    const banana = Number(document.getElementById("banana").value);
+
+    const appleprice = parseFloat(document.getElementById("appleprice").value);
+    const orangesprice = parseFloat(document.getElementById("orangesprice").value);
+    const bananaprice = parseFloat(document.getElementById("bananaprice").value);
+
+    const basket = { apple, oranges, banana }
+    const prices = { apple: appleprice, oranges: orangesprice, banana: bananaprice }
+    
+    const result = f7(basket, prices);
     alert("The sum is: " + result);
 }

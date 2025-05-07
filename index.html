@@ -1,94 +1,129 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
+
 <head>
-  <title>Baggage Weight Checker</title>
+    <title>Baggage Weight Checker</title>
 </head>
+
 <body>
-  <h1>Exercise 1:</h1>
-  <label for="weightInput">Enter baggage weight (kg):</label>
-  <input  type="number" id="weightInput" placeholder="e.g. 12.5">
-  <button onclick="checkBaggage()">Check Weight</button>
-  
-  <h1>Exercise 2:</h1>
-  <p>Create a page with a button</p>
-  <p>When the user clicks, </p>
-  <p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.</p>
-  <p>Find the sum of all the multiples of 3 or 5 below 1000 and alert the user to the correct answer.</p>
-  <p>The prompt: <button onclick="doIt()">Press me!</button></p>
+    <h1>Exercise 1:</h1>
+    <label for="weightInput">Enter baggage weight (kg):</label>
+    <input type="number" id="weightInput" placeholder="e.g. 12.5">
+    <button onclick="checkBaggage()">Check Weight</button>
 
-  <h1>Exercise 3:</h1>
-  <p>Create a page with a button and three input boxes, labelled a, b and n</p>
-  <p>When the user clicks, </p>
-  <p>
-      <p>Create a function to return the sum of all the multiples of a or b below n</p>
-      <p>Call the function and alert the user to the correct answer when they press the button.</p>
-  </p>
+    <h1>Exercise 2:</h1>
+    <p>Create a page with a button</p>
+    <p>When the user clicks, </p>
+    <p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these
+        multiples is 23.</p>
+    <p>Find the sum of all the multiples of 3 or 5 below 1000 and alert the user to the correct answer.</p>
+    <p>The prompt: <button onclick="doIt()">Press me!</button></p>
 
-  <label for="a">a: </label>
-  <input type="number" id="a"><br><br>
+    <h1>Exercise 3:</h1>
+    <p>Create a page with a button and three input boxes, labelled a, b and n</p>
+    <p>When the user clicks, </p>
+    <p>
+    <p>Create a function to return the sum of all the multiples of a or b below n</p>
+    <p>Call the function and alert the user to the correct answer when they press the button.</p>
+    </p>
 
-  <label for="b">b: </label>
-  <input type="number" id="b"><br><br>
+    <label for="a">a: </label>
+    <input type="number" id="a"><br><br>
 
-  <label for="n">n: </label>
-  <input type="number" id="n"><br><br>
+    <label for="b">b: </label>
+    <input type="number" id="b"><br><br>
 
-  <button onclick="calculateAndShowSum()">Calculate Sum</button>
+    <label for="n">n: </label>
+    <input type="number" id="n"><br><br>
 
-  <h1>Exercise 4:</h1>
-  <p>Exercise 4, Arrays: f4 should take 2 integer and 1 array parameters and return an integer.</p>
-  <p>Create a function f4 to return the sum of all the multiples of a or b in array l</p>
-  <p>(Exercise 4.1) Create a page with a button and three input boxes, labelled a, b and l, l should be a large input</p>
-  <p>Call the function f4 in the function called by onClick, and alert the user to the 
-      returned answer when they press the button.</p>
- 
-  <label for="inputA">a:</label>
-  <input type="number" id="inputA"><br><br>
+    <button onclick="calculateAndShowSum()">Calculate Sum</button>
 
-  <label for="inputB">b:</label>
-  <input type="number" id="inputB"><br><br>
+    <h1>Exercise 4:</h1>
+    <p>Exercise 4, Arrays: f4 should take 2 integer and 1 array parameters and return an integer.</p>
+    <p>Create a function f4 to return the sum of all the multiples of a or b in array l</p>
+    <p>(Exercise 4.1) Create a page with a button and three input boxes, labelled a, b and l, l should be a large input
+    </p>
+    <p>Call the function f4 in the function called by onClick, and alert the user to the
+        returned answer when they press the button.</p>
 
-  <label for="inputL">l (comma-separated numbers):</label><br>
-  <textarea id="inputL" rows="5" cols="50"></textarea><br><br>
+    <label for="inputA">a:</label>
+    <input type="number" id="inputA"><br><br>
 
-  <button onclick="handleClick()">Calculate Sum</button>
+    <label for="inputB">b:</label>
+    <input type="number" id="inputB"><br><br>
 
-  <h1>Exercise 5:</h1>
-  <p>Exercise 5, Arrays: f5 should take array parameters and return an integer.</p>
-  <p>Create a function f5 to return the sum of all the multiples of factors in a 
-      found in in l (a and l should be arrays of integers, a is of length 2)</p>
-  <p>(Exercise 5.1) Create a page with a button and two wide input boxes, labelled a and l</p>
-  <p>Call the function f5 in the function called by onClick, and alert the user to the 
-      returned answer when they press the button.</p>
-  </p>
-  <p>You may find the split function useful for creating arrays from the strings entered: <a href="https://www.w3schools.com/jsref/jsref_split.asp">Split</a></p>
+    <label for="inputL">l (comma-separated numbers):</label><br>
+    <textarea id="inputL" rows="5" cols="50"></textarea><br><br>
 
-  <label for="inputAA">a (two numbers, comma-separated):</label><br>
-  <textarea id="inputAA" rows="2" cols="50"></textarea><br><br>
+    <button onclick="handleClick()">Calculate Sum</button>
 
-  <label for="inputLL">l (list of numbers, comma-separated):</label><br>
-  <textarea id="inputLL" rows="4" cols="50"></textarea><br><br>
+    <h1>Exercise 5:</h1>
+    <p>Exercise 5, Arrays: f5 should take array parameters and return an integer.</p>
+    <p>Create a function f5 to return the sum of all the multiples of factors in a
+        found in in l (a and l should be arrays of integers, a is of length 2)</p>
+    <p>(Exercise 5.1) Create a page with a button and two wide input boxes, labelled a and l</p>
+    <p>Call the function f5 in the function called by onClick, and alert the user to the
+        returned answer when they press the button.</p>
+    </p>
+    <p>You may find the split function useful for creating arrays from the strings entered: <a
+            href="https://www.w3schools.com/jsref/jsref_split.asp">Split</a></p>
 
-  <button onclick="handleClick2()">Calculate Sum</button>
+    <label for="inputAA">a (two numbers, comma-separated):</label><br>
+    <textarea id="inputAA" rows="2" cols="50"></textarea><br><br>
 
-  <h1>Exercise 6:</h1>
-  <p>Exercise 6, Arrays: f6 should take array parameters and return an integer.</p>
-  <p>Create a function f6 to return the sum of all the multiples of factors in a 
-      found in in l (a and l should be arrays of integers)</p>
-  <p>(Exercise 6.1) Create a page with a button and two wide input boxes, labelled a and l</p>
-  <p>Call the function f6 in the function called by onClick, and alert the user to the 
-      returned answer when they press the button.</p>
-  </p>
-  <p>You may find the split function useful for creating arrays from the strings entered: <a href="https://www.w3schools.com/jsref/jsref_split.asp">Split</a></p>
+    <label for="inputLL">l (list of numbers, comma-separated):</label><br>
+    <textarea id="inputLL" rows="4" cols="50"></textarea><br><br>
 
-  <label for="inputAAA">a (comma-separated factors):</label><br>
-  <textarea id="inputAAA" rows="2" cols="50"></textarea><br><br>
+    <button onclick="handleClick2()">Calculate Sum</button>
 
-  <label for="inputLLL">l (comma-separated values):</label><br>
-  <textarea id="inputLLL" rows="4" cols="50"></textarea><br><br>
+    <h1>Exercise 6:</h1>
+    <p>Exercise 6, Arrays: f6 should take array parameters and return an integer.</p>
+    <p>Create a function f6 to return the sum of all the multiples of factors in a
+        found in in l (a and l should be arrays of integers)</p>
+    <p>(Exercise 6.1) Create a page with a button and two wide input boxes, labelled a and l</p>
+    <p>Call the function f6 in the function called by onClick, and alert the user to the
+        returned answer when they press the button.</p>
+    </p>
+    <p>You may find the split function useful for creating arrays from the strings entered: <a
+            href="https://www.w3schools.com/jsref/jsref_split.asp">Split</a></p>
 
-  <button onclick="handleClick3()">Calculate Sum</button>
+    <label for="inputAAA">a (comma-separated factors):</label><br>
+    <textarea id="inputAAA" rows="2" cols="50"></textarea><br><br>
 
-  <script src="./custom.js"></script>
+    <label for="inputLLL">l (comma-separated values):</label><br>
+    <textarea id="inputLLL" rows="4" cols="50"></textarea><br><br>
+
+    <button onclick="handleClick3()">Calculate Sum</button>
+
+    <h1>Exercise 7:</h1>
+    <p>Objects as dictionaries/hashtables:</p>
+
+    <p>Create a function, f7, that takes two parameters, basket and prices</p>
+    <p>f7 should compute the cost of the basket given the prices supplied.</p>
+    <p>basket should be an object holding product:quantity (string:int) pairs</p>
+    <p>prices should be an object holding product:price (string:float) pairs</p>
+
+    <p>==7.1==</p>
+    <p>Create a testing page for the function f7</p>
+
+    <label for="apple">apple: </label>
+    <input type="number" id="apple" max="10"><br>
+    <label for="appleprice">apple price: </label>
+    <input type="number" id="appleprice" max="10"><br><br>
+
+    <label for="oranges">oranges: </label>
+    <input type="number" id="oranges" max="10"><br>
+    <label for="orangesprice">oranges price: </label>
+    <input type="number" id="orangesprice" max="10"><br><br>
+
+    <label for="banana">banana: </label>
+    <input type="number" id="banana" max="10"><br>
+    <label for="bananaprice">banana price: </label>
+    <input type="number" id="bananaprice" max="10"><br><br>
+
+    <button onclick="handleClick4()">Calculate Total Cost</button>
+
+    <script src="./custom.js"></script>
 </body>
+
 </html>
